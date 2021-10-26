@@ -118,11 +118,8 @@ namespace ComputerList
                 }*/
                 IEnumerable<ComputerModel> quantityList = listComputers
                   .Where(q => q.QuantityComputer > 30);
-
-                foreach (ComputerModel q in quantityList)
-                {
-                    moreThan30Computers ++;
-                }
+                moreThan30Computers = quantityList.Count();
+                
                 if (moreThan30Computers>0)
                 {
                     Console.WriteLine("Есть компьютер(ы), количество которого(ых) больше 30");
